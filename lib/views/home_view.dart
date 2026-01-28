@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_web/backgroung%20animation/particle_animation.dart';
 import 'package:portfolio_web/components/about_section.dart';
 import 'package:portfolio_web/components/contact_section.dart';
@@ -71,7 +72,82 @@ class HomeView extends StatelessWidget {
         ),
         actions: [
           isMobile
-              ? SizedBox()
+              ? PopupMenuButton(
+                  icon: Icon(Icons.menu, color: Colors.white),
+                  padding: EdgeInsets.all(10),
+                  color: Colors.grey[800]!.withOpacity(0.95),
+                  surfaceTintColor: Colors.transparent,
+                  elevation: 8,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                    side: BorderSide(
+                      color: Colors.amber.withOpacity(0.3),
+                      width: 1,
+                    ),
+                  ),
+                  onSelected: (value) {
+                    switch (value) {
+                      case 'About':
+                        scrollTo(aboutKey);
+                        break;
+                      case 'Experience':
+                        scrollTo(experienceKey);
+                        break;
+                      case 'Projects':
+                        scrollTo(projectsKey);
+                        break;
+                      case 'Contact':
+                        scrollTo(contactKey);
+                        break;
+                    }
+                  },
+                  itemBuilder: (context) => [
+                    PopupMenuItem(
+                      value: 'About',
+                      child: Text(
+                        'About',
+                        style: GoogleFonts.poppins(
+                          color: Colors.white,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                    PopupMenuItem(
+                      value: 'Experience',
+                      child: Text(
+                        'Experience',
+                        style: GoogleFonts.poppins(
+                          color: Colors.white,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                    PopupMenuItem(
+                      value: 'Projects',
+                      child: Text(
+                        'Projects',
+                        style: GoogleFonts.poppins(
+                          color: Colors.white,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                    PopupMenuItem(
+                      value: 'Contact',
+                      child: Text(
+                        'Contact',
+                        style: GoogleFonts.poppins(
+                          color: Colors.white,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                  ],
+                )
               : Padding(
                   padding: EdgeInsets.only(right: 14, top: 14),
                   child: Material(
@@ -156,7 +232,14 @@ class HomeView extends StatelessWidget {
                 Container(
                   height: isMobile ? 60 : 100,
                   width: screenWidth,
-                  decoration: BoxDecoration(color: Colors.white24),
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        Colors.amber.withOpacity(0.1),
+                        Colors.amber.withOpacity(0.05),
+                      ],
+                    ),
+                  ),
                   child: Center(
                     child: Text(
                       'CopyRight 2026 ©Code with Amna',
