@@ -1,0 +1,38 @@
+name: Build and Deploy Flutter Web
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.38.2'
+    
+    - name: Install dependencies
+      run: flutter pub get
+    
+    - name: Build web
+      run: flutter build web --release
+    
+    - name: Remove old build files
+      run: |
+        rm -rf docs assets canvaskit *.js *.json index.html favicon.png flutter.* manifest.json version.json || true
+    
+    - name: Copy new build files to root
+      run: cp -r build/web/* .
+    
+    - name: Commit and Push changes
+      run: |
+        git config user.name "GitHub Actions Bot"
+        git config user.email "actions@github.com"
+        git add .
+        git commit -m "Auto-deploy: Built Flutter web [skip ci]" || echo "No changes to commit"
+        git push
