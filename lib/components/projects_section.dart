@@ -24,7 +24,7 @@ class ProjectsSection extends StatelessWidget {
         Wrap(
           children: [
             ProjectCard(
-              image: 'assets/banner.png',
+              image: 'assets/banner.PNG',
               title: 'Crime Analytics-ML based Crime Rate Prediction App',
               description:
                   "Developed a Flutter application for route safety prediction powered by a self-trained Random Forest ML model. "
@@ -41,7 +41,7 @@ class ProjectsSection extends StatelessWidget {
               ],
             ),
             ProjectCard(
-              image: 'assets/banner3.png',
+              image: 'assets/banner3.PNG',
               title: 'ChatHub- A Real-Time Chat Application',
               description:
                   "Engineered chat app featuring user authentication, Gmail authentication, and real-time messaging."
