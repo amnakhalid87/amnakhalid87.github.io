@@ -24,7 +24,7 @@ class ProjectsSection extends StatelessWidget {
         Wrap(
           children: [
             ProjectCard(
-              image: 'assets/assets/banner.png',
+              image: 'assets/banner.png',
               title: 'Crime Analytics-ML based Crime Rate Prediction App',
               description:
                   "Developed a Flutter application for route safety prediction powered by a self-trained Random Forest ML model. "
@@ -32,6 +32,8 @@ class ProjectsSection extends StatelessWidget {
 
               githubLink: 'https://github.com/amnakhalid87/crime-analytics-fyp',
               techStack: [
+                "flutter",
+                "dart",
                 'firebase-auth',
                 'http',
                 'Open-Street-Map',
@@ -41,7 +43,7 @@ class ProjectsSection extends StatelessWidget {
               ],
             ),
             ProjectCard(
-              image: 'assets/assets/banner3.png',
+              image: 'assets/banner3.png',
               title: 'ChatHub- A Real-Time Chat Application',
               description:
                   "Engineered chat app featuring user authentication, Gmail authentication, and real-time messaging."
@@ -58,7 +60,7 @@ class ProjectsSection extends StatelessWidget {
             ),
             ProjectCard(
               title: "AI ChatBot Application",
-              image: 'assets/assets/banner4.png',
+              image: 'assets/banner4.png',
               description:
                   "Developed an AI-powered chatbot application using Flutter with dual API integration. "
                   "Implemented Gemini API for intelligent text-based conversations and Imagine Art API for AI-generated images from text prompts. "
@@ -69,6 +71,7 @@ class ProjectsSection extends StatelessWidget {
                 "gemini-api",
                 "imagine-art",
                 "gal",
+                "permission-handling",
                 "HTTP",
               ],
 
@@ -76,7 +79,7 @@ class ProjectsSection extends StatelessWidget {
             ),
             ProjectCard(
               title: "News Application",
-              image: 'assets/assets/banner2.png',
+              image: 'assets/banner2.png',
               description:
                   "Developed a feature-rich news application using Flutter and News API integration. "
                   "Implemented an intuitive onboarding experience, hottest news feed, trending news section, and category-based news browsing. "
