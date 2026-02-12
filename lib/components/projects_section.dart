@@ -24,7 +24,7 @@ class ProjectsSection extends StatelessWidget {
         Wrap(
           children: [
             ProjectCard(
-              image: 'assets/banner.PNG',
+              image: 'assets/assets/banner.png',
               title: 'Crime Analytics-ML based Crime Rate Prediction App',
               description:
                   "Developed a Flutter application for route safety prediction powered by a self-trained Random Forest ML model. "
@@ -41,7 +41,7 @@ class ProjectsSection extends StatelessWidget {
               ],
             ),
             ProjectCard(
-              image: 'assets/banner3.PNG',
+              image: 'assets/assets/banner3.png',
               title: 'ChatHub- A Real-Time Chat Application',
               description:
                   "Engineered chat app featuring user authentication, Gmail authentication, and real-time messaging."
@@ -57,8 +57,26 @@ class ProjectsSection extends StatelessWidget {
               ],
             ),
             ProjectCard(
+              title: "AI ChatBot Application",
+              image: 'assets/assets/banner4.png',
+              description:
+                  "Developed an AI-powered chatbot application using Flutter with dual API integration. "
+                  "Implemented Gemini API for intelligent text-based conversations and Imagine Art API for AI-generated images from text prompts. "
+                  "Integrated gallery permissions handling using the gal package, enabling users to save AI-generated images directly to their device gallery. ",
+              techStack: [
+                "flutter",
+                "dart",
+                "gemini-api",
+                "imagine-art",
+                "gal",
+                "HTTP",
+              ],
+
+              githubLink: 'https://github.com/amnakhalid87/ai_chatbot',
+            ),
+            ProjectCard(
               title: "News Application",
-              image: 'assets/banner2.png',
+              image: 'assets/assets/banner2.png',
               description:
                   "Developed a feature-rich news application using Flutter and News API integration. "
                   "Implemented an intuitive onboarding experience, hottest news feed, trending news section, and category-based news browsing. "
